@@ -48,28 +48,44 @@ header {
   padding: 1rem;
 }
 header nav {
+  max-width: 1440px;
+  margin: 0 auto;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
 }
+/* .nav-center {
+    display: flex;
+    justify-content: space-between;
+  } */
 header .left {
   font-size: 1.5rem;
   font-weight: 700;
 }
-header .right {
+header nav .links {
   display: flex;
   list-style: none;
+  height: auto;
 }
-header .right li {
+header nav .links li {
   margin-left: 1rem;
 }
-header .right li a {
+header nav .links li a {
+  padding: 0;
+  margin: 0 0.5rem;
   color: white;
   text-decoration: none;
   transition: color 0.3s ease;
 }
-header .right li a:hover {
+header .links li a:hover {
   color: #f39c12;
+}
+.nav-toggle {
+  display: none;
+}
+#menu-bar {
+  display: none;
 }
 
 section {
@@ -250,12 +266,54 @@ footer p {
 
 /* Media queries */
 @media (max-width: 768px) {
-  header .right {
+  nav {
+    display: flex;
+    flex-direction: column;
+  }
+  .nav-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    width: 100%;
+  }
+  header .links {
     flex-direction: column;
     align-items: center;
   }
-  header .right li {
+  header .links li {
     margin: 0.5rem 0;
+  }
+  #menu-bar {
+    display: block;
+    width: 50px;
+    height: 50px;
+  }
+  header nav .links {
+    height: 0;
+    overflow: hidden;
+    transition: all 0.3s linear;
+  }
+  .links a {
+    display: block;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    letter-spacing: 0.1rem;
+  }
+  .show-links {
+    height: 10rem !important;
+  }
+  .nav-toggle {
+    display: block;
+    font-size: 1.5rem;
+    background: transparent;
+    border-color: transparent;
+    cursor: pointer;
+    transition: all 0.3s linear;
+  }
+  .nav-toggle:hover {
+    color: #333333;
+    transform: rotate(90deg);
   }
   section {
     height: auto;

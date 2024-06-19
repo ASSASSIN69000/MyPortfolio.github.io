@@ -16,8 +16,13 @@
     <!-- header -->
     <header>
       <nav>
-        <div class="left">Syed Mohammad Ammar</div>
-        <ul class="d-f right">
+        <div class="nav-header">
+          <div class="left">Syed Mohammad Ammar</div>
+          <button class="nav-toggle">
+            <img src="/assets/imgs/bars-solid.svg" alt="Menu" id="menu-bar" />
+          </button>
+        </div>
+        <ul class="d-f links">
           <li><a href="#projects" class="nav-links">Projects</a></li>
           <li><a href="#services" class="nav-links">Services</a></li>
           <li><a href="#about" class="nav-links">About</a></li>
@@ -279,6 +284,7 @@
     </footer>
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
     <script>
+      // typing animation:
       var typed = new Typed("#element", {
         strings: [
           '<span class="bg-font blok">Welcome.</span>',
@@ -287,6 +293,13 @@
         ],
         typeSpeed: 50,
         showCursor: false,
+      });
+
+      // collapsible navbar:
+      const navToggle = document.querySelector(".nav-toggle");
+      const links = document.querySelector(".links");
+      navToggle.addEventListener("click", function () {
+        links.classList.toggle("show-links");
       });
     </script>
   </body>
