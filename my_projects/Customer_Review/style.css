@@ -1,0 +1,83 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+hr {
+  width: 50%;
+  margin: 15px auto 10px auto;
+  border-radius: 8px;
+}
+
+#person-img {
+  width: 200px;
+  height: 200px;
+ /* background-color: aqua;*/
+  border-color: green;
+  border-right-color: aqua;
+  border-bottom-color: aqua;
+}
+
+.card {
+  width: 50%;
+  padding: 30px 30px 20px 30px;
+  margin: 40px auto 0 auto;
+  border-radius: 12px;
+  border: none;
+  box-shadow: 1px 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+#author {
+  text-transform: capitalize;
+  font-style: italic;
+}
+
+#job {
+  font-weight: 500;
+  text-transform: uppercase;
+  color: teal;
+}
+
+button {
+    border: none;
+    color: cadetblue;
+    border-radius: 4px;
+    background-color: none;
+    transition: transform 0.5s, background-color 0.5s;
+}
+
+button:hover {
+  box-shadow: 1px 2px 5px rgba(0, 0, 10, 0.5);
+  transform: translateY(-1px);
+  background-color: #faddff;
+}
+
+.previous-btn {
+  margin-right: 20px;
+  width: 32px;
+  background-color: none;
+}
+
+.next-btn {
+  margin-left: 20px;
+  width: 32px;
+  background-color: none;
+}
+
+#surprise {
+  display: block;
+  margin: 10px auto 0 auto;
+}
+
+@media screen and (max-width: 420px) {
+  .card {
+    width: 90vw;
+    margin: 20px auto 0 auto;
+  }
+  hr {
+    width: 70%;
+    border: none;
+    margin: 10px auto;
+  }
+}
