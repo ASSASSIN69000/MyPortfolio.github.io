@@ -332,11 +332,16 @@ footer p {
     padding: 10px 0;
     flex: 1 1 calc(100% - 1rem);
   }
+  .about-para {
+    text-align: justify;
+  }
   .fifthSection .contacts-container {
     flex-direction: column;
     justify-content: space-around;
+    align-items: center;
   }
   .contacts-ul {
     width: 100%;
+    gap: 12px !important;
   }
 }
