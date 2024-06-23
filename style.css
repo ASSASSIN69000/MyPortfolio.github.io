@@ -321,8 +321,7 @@ footer p {
     flex-direction: column;
   }
   #firstSection img {
-    width: 250px;
-    height: 250px;
+    width: auto;
   }
   .secondSection .belowSection {
     flex-direction: column;
