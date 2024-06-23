@@ -43,7 +43,7 @@
           </p>
         </div>
         <div class="rightSection">
-          <img src="/imgs/toonMe.jpeg" alt="Myself" id="profilePic" />
+          <img src="/myself2.jpeg" alt="Myself" id="profilePic" />
         </div>
       </section>
 
@@ -204,7 +204,7 @@
           <div class="contacts">
             <ul class="contacts-ul">
               <li class="contacts-li">
-                <a href="" target="_blank">
+                <a href="" target="_blank" id="emailLink">
                   <img
                     style="color: brown"
                     src="imgs/envelope-regular.svg"
@@ -214,7 +214,7 @@
                 </a>
               </li>
               <li class="contacts-li">
-                <a href="" target="_blank">
+                <a href="https://github.com/ASSASSIN69000" target="_blank">
                   <img
                     src="imgs/github.svg"
                     alt="GitHub"
@@ -223,7 +223,10 @@
                 </a>
               </li>
               <li class="contacts-li">
-                <a href="" target="_blank">
+                <a
+                  href="https://www.linkedin.com/in/syed-mohammad-ammar-syed-mohammad-amir-b976a221b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                  target="_blank"
+                >
                   <img
                     src="imgs/linkedin.svg"
                     alt="LinkedIn"
@@ -232,7 +235,7 @@
                 </a>
               </li>
               <li class="contacts-li">
-                <a href="" target="_blank">
+                <a href="https://wa.me/03180235074" target="_blank">
                   <img
                     src="imgs/whatsapp.svg"
                     alt="WhatsApp"
@@ -241,7 +244,10 @@
                 </a>
               </li>
               <li class="contacts-li">
-                <a href="" target="_blank">
+                <a
+                  href="https://www.facebook.com/AmmarAamir9000?mibextid=ZbWKwL"
+                  target="_blank"
+                >
                   <img
                     src="imgs/facebook-f.svg"
                     alt="Facebook"
@@ -249,7 +255,7 @@
                   />
                 </a>
               </li>
-              <li class="contacts-li">
+              <!-- <li class="contacts-li">
                 <a href="" target="_blank">
                   <img
                     src="imgs/x-twitter.svg"
@@ -257,7 +263,7 @@
                     class="contact-logos"
                   />
                 </a>
-              </li>
+              </li> -->
             </ul>
           </div>
         </div>
@@ -285,6 +291,20 @@
       const links = document.querySelector(".links");
       navToggle.addEventListener("click", function () {
         links.classList.toggle("show-links");
+      });
+
+      document.addEventListener("DOMContentLoaded", function () {
+        var emailLink = document.getElementById("emailLink");
+
+        // Add a click event listener to the email link
+        emailLink.addEventListener("click", function (event) {
+          event.preventDefault(); // Prevent the default action of opening the link
+          var emailAddress = "ammarkhulood50@gmail.com";
+          // Create a mailto link with the email address
+          var mailtoLink = "mailto:" + encodeURIComponent(emailAddress);
+          // Open the user's default email client
+          window.location.href = mailtoLink;
+        });
       });
     </script>
   </body>

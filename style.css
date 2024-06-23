@@ -116,12 +116,11 @@ section {
   flex: 1;
   display: flex;
   justify-content: center;
+  margin-bottom: 10px;
 }
 #firstSection img {
-  border-radius: 50%;
-  width: 500px;
-  height: 500px;
-  max-width: 100%;
+  border-radius: 12px;
+  max-width: 70%;
 }
 
 /* Projects section */
